@@ -48,4 +48,7 @@ Module FuncionesGlobales
             Directory.CreateDirectory(DirectorioSocket) 'CREACIÓN DE DIRECTORIO.'
         End If
     End Function
+    Public Function RevisarServidor() As Boolean
+
+    End Function
 End Module
