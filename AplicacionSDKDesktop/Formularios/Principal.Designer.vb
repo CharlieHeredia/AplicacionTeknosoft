@@ -55,6 +55,7 @@ Partial Class Principal
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBoxServidorSQL = New System.Windows.Forms.GroupBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.GroupBoxEmpresa = New System.Windows.Forms.GroupBox()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBoxServidor.SuspendLayout()
         Me.GroupBoxServidorSQL.SuspendLayout()
@@ -281,7 +282,7 @@ Partial Class Principal
         Me.GroupBoxServidorSQL.Controls.Add(Me.Label4)
         Me.GroupBoxServidorSQL.Location = New System.Drawing.Point(544, 144)
         Me.GroupBoxServidorSQL.Name = "GroupBoxServidorSQL"
-        Me.GroupBoxServidorSQL.Size = New System.Drawing.Size(208, 205)
+        Me.GroupBoxServidorSQL.Size = New System.Drawing.Size(208, 93)
         Me.GroupBoxServidorSQL.TabIndex = 2
         Me.GroupBoxServidorSQL.TabStop = False
         Me.GroupBoxServidorSQL.Text = "Servidor SQL"
@@ -295,11 +296,21 @@ Partial Class Principal
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Instancia"
         '
+        'GroupBoxEmpresa
+        '
+        Me.GroupBoxEmpresa.Location = New System.Drawing.Point(544, 243)
+        Me.GroupBoxEmpresa.Name = "GroupBoxEmpresa"
+        Me.GroupBoxEmpresa.Size = New System.Drawing.Size(208, 106)
+        Me.GroupBoxEmpresa.TabIndex = 3
+        Me.GroupBoxEmpresa.TabStop = False
+        Me.GroupBoxEmpresa.Text = "Empresa"
+        '
         'Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(764, 361)
+        Me.Controls.Add(Me.GroupBoxEmpresa)
         Me.Controls.Add(Me.GroupBoxServidorSQL)
         Me.Controls.Add(Me.GroupBoxServidor)
         Me.Controls.Add(Me.MenuStrip1)
@@ -349,5 +360,6 @@ Partial Class Principal
     Friend WithEvents DToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GroupBoxServidorSQL As System.Windows.Forms.GroupBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents GroupBoxEmpresa As System.Windows.Forms.GroupBox
 
 End Class
