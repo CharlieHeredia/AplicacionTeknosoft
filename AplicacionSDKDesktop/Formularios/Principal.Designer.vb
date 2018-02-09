@@ -53,8 +53,11 @@ Partial Class Principal
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.GroupBoxServidorSQL = New System.Windows.Forms.GroupBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBoxServidor.SuspendLayout()
+        Me.GroupBoxServidorSQL.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -77,7 +80,7 @@ Partial Class Principal
         '
         Me.SalirToolStripMenuItem.Image = CType(resources.GetObject("SalirToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(96, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'ArchivoToolStripMenuItem
@@ -198,13 +201,13 @@ Partial Class Principal
         'IniciarToolStripMenuItem
         '
         Me.IniciarToolStripMenuItem.Name = "IniciarToolStripMenuItem"
-        Me.IniciarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.IniciarToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
         Me.IniciarToolStripMenuItem.Text = "Iniciar"
         '
         'DToolStripMenuItem
         '
         Me.DToolStripMenuItem.Name = "DToolStripMenuItem"
-        Me.DToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
         Me.DToolStripMenuItem.Text = "Detener"
         '
         'GroupBoxServidor
@@ -215,9 +218,9 @@ Partial Class Principal
         Me.GroupBoxServidor.Controls.Add(Me.Label3)
         Me.GroupBoxServidor.Controls.Add(Me.Label2)
         Me.GroupBoxServidor.Controls.Add(Me.Label1)
-        Me.GroupBoxServidor.Location = New System.Drawing.Point(12, 27)
+        Me.GroupBoxServidor.Location = New System.Drawing.Point(544, 39)
         Me.GroupBoxServidor.Name = "GroupBoxServidor"
-        Me.GroupBoxServidor.Size = New System.Drawing.Size(208, 92)
+        Me.GroupBoxServidor.Size = New System.Drawing.Size(208, 98)
         Me.GroupBoxServidor.TabIndex = 1
         Me.GroupBoxServidor.TabStop = False
         Me.GroupBoxServidor.Text = "Servidor"
@@ -267,17 +270,37 @@ Partial Class Principal
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(10, 20)
+        Me.Label1.Location = New System.Drawing.Point(7, 20)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(65, 13)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Dirección IP"
+        '
+        'GroupBoxServidorSQL
+        '
+        Me.GroupBoxServidorSQL.Controls.Add(Me.Label4)
+        Me.GroupBoxServidorSQL.Location = New System.Drawing.Point(544, 144)
+        Me.GroupBoxServidorSQL.Name = "GroupBoxServidorSQL"
+        Me.GroupBoxServidorSQL.Size = New System.Drawing.Size(208, 205)
+        Me.GroupBoxServidorSQL.TabIndex = 2
+        Me.GroupBoxServidorSQL.TabStop = False
+        Me.GroupBoxServidorSQL.Text = "Servidor SQL"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(7, 28)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(50, 13)
+        Me.Label4.TabIndex = 0
+        Me.Label4.Text = "Instancia"
         '
         'Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(764, 361)
+        Me.Controls.Add(Me.GroupBoxServidorSQL)
         Me.Controls.Add(Me.GroupBoxServidor)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
@@ -288,6 +311,8 @@ Partial Class Principal
         Me.MenuStrip1.PerformLayout()
         Me.GroupBoxServidor.ResumeLayout(False)
         Me.GroupBoxServidor.PerformLayout()
+        Me.GroupBoxServidorSQL.ResumeLayout(False)
+        Me.GroupBoxServidorSQL.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -322,5 +347,7 @@ Partial Class Principal
     Friend WithEvents ServidorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents IniciarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents GroupBoxServidorSQL As System.Windows.Forms.GroupBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 
 End Class
