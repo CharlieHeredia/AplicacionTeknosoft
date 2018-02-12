@@ -42,7 +42,19 @@ Module FuncionesGlobales
             End Using
         End Using
     End Function
-
+    Public Function ExistenciaArchivoConfiguracion() As Boolean
+        If File.Exists(DirectorioArchivoConfiguracion) = False Then
+            Dim path = File.Create(DirectorioArchivoConfiguracion) 'SE CREA EL ARCHIVO DE CONFIGURACIÓN.'
+            'CREAR LAS LINEAS.'
+            '1.Ruta de Empresa
+            '2.Puerto y direccion ip
+            '3.SQL (usuario,pass,instancia)
+            path.Close()
+            Dim texto() As String = {"EMPTY", "EMPTY", "EMPTY"}
+            File.WriteAllLines(DirectorioArchivoConfiguracion, texto)
+            EncryptFile(DirectorioArchivoConfiguracion, Key)
+        End If
+    End Function
     Public Function ExistenciaDirectorioSocket() As Boolean
         If Directory.Exists(DirectorioSocket) = False Then 'VERIFICACIÓN DE EXISTENCIA DE DIRECTORIO.'
             Directory.CreateDirectory(DirectorioSocket) 'CREACIÓN DE DIRECTORIO.'
@@ -50,5 +62,30 @@ Module FuncionesGlobales
     End Function
     Public Function RevisarServidor() As Boolean
 
+    End Function
+    Public Function LeerLineaArchivo(ByVal linea As Integer) As String
+        'LEE EL ARCHIVO DE CONFIGURACIÓN, REGRESA LA LINEA DE TEXTO QUE SE LE ENVIE COMO PARAMETRO.'
+        DecryptFile(DirectorioArchivoConfiguracion, Key)
+        Dim lineas() As String = File.ReadAllLines(DirectorioArchivoConfiguracion)
+        Dim texto As String = lineas(linea)
+        EncryptFile(DirectorioArchivoConfiguracion, Key)
+        Return texto
+    End Function
+    Private Function LeerArchivo()
+        'LEE LA INFORMACIÓN DEL ARCHIVO DE CONFIGURACIÓN.'
+        'UTILIZADA COMO SUBFUNCIÓN
+        DecryptFile(DirectorioArchivoConfiguracion, Key)
+        Dim lineas() As String = File.ReadAllLines(DirectorioArchivoConfiguracion)
+        EncryptFile(DirectorioArchivoConfiguracion, Key)
+        Return lineas
+    End Function
+    Public Function ActualizarLineaArchivo(ByVal texto As String, ByVal linea As Integer)
+        Dim lineas() As String = LeerArchivo()
+        lineas(linea) = texto
+        Using file As New IO.StreamWriter(DirectorioArchivoConfiguracion) 'CICLO PARA VACIAR EL ARCHIVO TXT.'
+            file.Flush()
+        End Using
+        File.WriteAllLines(DirectorioArchivoConfiguracion, lineas) 'ACTUALIZAR LA INFORMACIÓN EN EL TXT.'
+        EncryptFile(DirectorioArchivoConfiguracion, Key)
     End Function
 End Module

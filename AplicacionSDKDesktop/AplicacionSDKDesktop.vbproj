@@ -71,6 +71,12 @@
   <ItemGroup>
     <Compile Include="Clases\ConfiguracionSistema.vb" />
     <Compile Include="Clases\TCPControl.vb" />
+    <Compile Include="Formularios\Empresa.Designer.vb">
+      <DependentUpon>Empresa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Empresa.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\Principal.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Formularios\Empresa.resx">
+      <DependentUpon>Empresa.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Principal.resx">
       <DependentUpon>Principal.vb</DependentUpon>
     </EmbeddedResource>

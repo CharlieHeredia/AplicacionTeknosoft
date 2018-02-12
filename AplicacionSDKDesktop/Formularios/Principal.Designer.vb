@@ -56,6 +56,7 @@ Partial Class Principal
         Me.GroupBoxServidorSQL = New System.Windows.Forms.GroupBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBoxEmpresa = New System.Windows.Forms.GroupBox()
+        Me.EmpresaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBoxServidor.SuspendLayout()
         Me.GroupBoxServidorSQL.SuspendLayout()
@@ -169,7 +170,7 @@ Partial Class Principal
         '
         'ConfiguraciónToolStripMenuItem
         '
-        Me.ConfiguraciónToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SQLToolStripMenuItem, Me.SocketToolStripMenuItem})
+        Me.ConfiguraciónToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SQLToolStripMenuItem, Me.SocketToolStripMenuItem, Me.EmpresaToolStripMenuItem})
         Me.ConfiguraciónToolStripMenuItem.Name = "ConfiguraciónToolStripMenuItem"
         Me.ConfiguraciónToolStripMenuItem.Size = New System.Drawing.Size(95, 20)
         Me.ConfiguraciónToolStripMenuItem.Text = "Configuración"
@@ -177,13 +178,13 @@ Partial Class Principal
         'SQLToolStripMenuItem
         '
         Me.SQLToolStripMenuItem.Name = "SQLToolStripMenuItem"
-        Me.SQLToolStripMenuItem.Size = New System.Drawing.Size(109, 22)
+        Me.SQLToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SQLToolStripMenuItem.Text = "SQL"
         '
         'SocketToolStripMenuItem
         '
         Me.SocketToolStripMenuItem.Name = "SocketToolStripMenuItem"
-        Me.SocketToolStripMenuItem.Size = New System.Drawing.Size(109, 22)
+        Me.SocketToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SocketToolStripMenuItem.Text = "Socket"
         '
         'ReporteToolStripMenuItem
@@ -213,6 +214,7 @@ Partial Class Principal
         '
         'GroupBoxServidor
         '
+        Me.GroupBoxServidor.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBoxServidor.Controls.Add(Me.LabelEstado)
         Me.GroupBoxServidor.Controls.Add(Me.LabelPuerto)
         Me.GroupBoxServidor.Controls.Add(Me.LabelIP)
@@ -279,6 +281,7 @@ Partial Class Principal
         '
         'GroupBoxServidorSQL
         '
+        Me.GroupBoxServidorSQL.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBoxServidorSQL.Controls.Add(Me.Label4)
         Me.GroupBoxServidorSQL.Location = New System.Drawing.Point(544, 144)
         Me.GroupBoxServidorSQL.Name = "GroupBoxServidorSQL"
@@ -298,12 +301,20 @@ Partial Class Principal
         '
         'GroupBoxEmpresa
         '
+        Me.GroupBoxEmpresa.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBoxEmpresa.Location = New System.Drawing.Point(544, 243)
         Me.GroupBoxEmpresa.Name = "GroupBoxEmpresa"
         Me.GroupBoxEmpresa.Size = New System.Drawing.Size(208, 106)
         Me.GroupBoxEmpresa.TabIndex = 3
         Me.GroupBoxEmpresa.TabStop = False
         Me.GroupBoxEmpresa.Text = "Empresa"
+        '
+        'EmpresaToolStripMenuItem
+        '
+        Me.EmpresaToolStripMenuItem.Name = "EmpresaToolStripMenuItem"
+        Me.EmpresaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EmpresaToolStripMenuItem.Text = "Empresa"
         '
         'Principal
         '
@@ -315,6 +326,7 @@ Partial Class Principal
         Me.Controls.Add(Me.GroupBoxServidor)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.MinimumSize = New System.Drawing.Size(780, 400)
         Me.Name = "Principal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "TeknoSoft"
@@ -361,5 +373,6 @@ Partial Class Principal
     Friend WithEvents GroupBoxServidorSQL As System.Windows.Forms.GroupBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents GroupBoxEmpresa As System.Windows.Forms.GroupBox
+    Friend WithEvents EmpresaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

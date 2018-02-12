@@ -91,9 +91,12 @@ Partial Class Socket
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(297, 165)
+        Me.ClientSize = New System.Drawing.Size(299, 161)
         Me.Controls.Add(Me.BtnGuardar)
         Me.Controls.Add(Me.GroupBox1)
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(315, 200)
+        Me.MinimumSize = New System.Drawing.Size(315, 200)
         Me.Name = "Socket"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Configuración de Socket"
