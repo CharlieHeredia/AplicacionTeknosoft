@@ -99,7 +99,7 @@ Partial Class Socket
         Me.MinimumSize = New System.Drawing.Size(315, 200)
         Me.Name = "Socket"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Configuración de Socket"
+        Me.Text = "Configuración de Servidor"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)

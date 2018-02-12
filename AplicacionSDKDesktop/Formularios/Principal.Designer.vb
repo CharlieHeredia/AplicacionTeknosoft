@@ -57,6 +57,7 @@ Partial Class Principal
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBoxEmpresa = New System.Windows.Forms.GroupBox()
         Me.EmpresaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TextBoxEstado = New System.Windows.Forms.TextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBoxServidor.SuspendLayout()
         Me.GroupBoxServidorSQL.SuspendLayout()
@@ -185,7 +186,7 @@ Partial Class Principal
         '
         Me.SocketToolStripMenuItem.Name = "SocketToolStripMenuItem"
         Me.SocketToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.SocketToolStripMenuItem.Text = "Socket"
+        Me.SocketToolStripMenuItem.Text = "Servidor"
         '
         'ReporteToolStripMenuItem
         '
@@ -215,6 +216,7 @@ Partial Class Principal
         'GroupBoxServidor
         '
         Me.GroupBoxServidor.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBoxServidor.Controls.Add(Me.TextBoxEstado)
         Me.GroupBoxServidor.Controls.Add(Me.LabelEstado)
         Me.GroupBoxServidor.Controls.Add(Me.LabelPuerto)
         Me.GroupBoxServidor.Controls.Add(Me.LabelIP)
@@ -316,6 +318,13 @@ Partial Class Principal
         Me.EmpresaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.EmpresaToolStripMenuItem.Text = "Empresa"
         '
+        'TextBoxEstado
+        '
+        Me.TextBoxEstado.Location = New System.Drawing.Point(93, 66)
+        Me.TextBoxEstado.Name = "TextBoxEstado"
+        Me.TextBoxEstado.Size = New System.Drawing.Size(100, 20)
+        Me.TextBoxEstado.TabIndex = 6
+        '
         'Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -374,5 +383,6 @@ Partial Class Principal
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents GroupBoxEmpresa As System.Windows.Forms.GroupBox
     Friend WithEvents EmpresaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TextBoxEstado As System.Windows.Forms.TextBox
 
 End Class

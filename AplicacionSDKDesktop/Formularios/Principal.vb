@@ -9,6 +9,8 @@
     Private Sub Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ExistenciaDirectorioSocket()
         ExistenciaArchivoConfiguracion()
+        TextBoxEstado.Enabled = False
+        TextBoxEstado.BackColor = Color.Red
     End Sub
 
    
