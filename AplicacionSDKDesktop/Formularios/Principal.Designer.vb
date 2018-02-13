@@ -42,11 +42,13 @@ Partial Class Principal
         Me.ConfiguraciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SQLToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SocketToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EmpresaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ServidorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IniciarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBoxServidor = New System.Windows.Forms.GroupBox()
+        Me.TextBoxEstado = New System.Windows.Forms.TextBox()
         Me.LabelEstado = New System.Windows.Forms.Label()
         Me.LabelPuerto = New System.Windows.Forms.Label()
         Me.LabelIP = New System.Windows.Forms.Label()
@@ -54,13 +56,15 @@ Partial Class Principal
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBoxServidorSQL = New System.Windows.Forms.GroupBox()
+        Me.LabelInstancia = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBoxEmpresa = New System.Windows.Forms.GroupBox()
-        Me.EmpresaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TextBoxEstado = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.LabelRuta = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBoxServidor.SuspendLayout()
         Me.GroupBoxServidorSQL.SuspendLayout()
+        Me.GroupBoxEmpresa.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -179,14 +183,20 @@ Partial Class Principal
         'SQLToolStripMenuItem
         '
         Me.SQLToolStripMenuItem.Name = "SQLToolStripMenuItem"
-        Me.SQLToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SQLToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.SQLToolStripMenuItem.Text = "SQL"
         '
         'SocketToolStripMenuItem
         '
         Me.SocketToolStripMenuItem.Name = "SocketToolStripMenuItem"
-        Me.SocketToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SocketToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.SocketToolStripMenuItem.Text = "Servidor"
+        '
+        'EmpresaToolStripMenuItem
+        '
+        Me.EmpresaToolStripMenuItem.Name = "EmpresaToolStripMenuItem"
+        Me.EmpresaToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+        Me.EmpresaToolStripMenuItem.Text = "Empresa"
         '
         'ReporteToolStripMenuItem
         '
@@ -229,6 +239,13 @@ Partial Class Principal
         Me.GroupBoxServidor.TabIndex = 1
         Me.GroupBoxServidor.TabStop = False
         Me.GroupBoxServidor.Text = "Servidor"
+        '
+        'TextBoxEstado
+        '
+        Me.TextBoxEstado.Location = New System.Drawing.Point(93, 66)
+        Me.TextBoxEstado.Name = "TextBoxEstado"
+        Me.TextBoxEstado.Size = New System.Drawing.Size(100, 20)
+        Me.TextBoxEstado.TabIndex = 6
         '
         'LabelEstado
         '
@@ -284,6 +301,7 @@ Partial Class Principal
         'GroupBoxServidorSQL
         '
         Me.GroupBoxServidorSQL.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBoxServidorSQL.Controls.Add(Me.LabelInstancia)
         Me.GroupBoxServidorSQL.Controls.Add(Me.Label4)
         Me.GroupBoxServidorSQL.Location = New System.Drawing.Point(544, 144)
         Me.GroupBoxServidorSQL.Name = "GroupBoxServidorSQL"
@@ -291,6 +309,14 @@ Partial Class Principal
         Me.GroupBoxServidorSQL.TabIndex = 2
         Me.GroupBoxServidorSQL.TabStop = False
         Me.GroupBoxServidorSQL.Text = "Servidor SQL"
+        '
+        'LabelInstancia
+        '
+        Me.LabelInstancia.AutoSize = True
+        Me.LabelInstancia.Location = New System.Drawing.Point(18, 60)
+        Me.LabelInstancia.Name = "LabelInstancia"
+        Me.LabelInstancia.Size = New System.Drawing.Size(0, 13)
+        Me.LabelInstancia.TabIndex = 1
         '
         'Label4
         '
@@ -305,6 +331,8 @@ Partial Class Principal
         '
         Me.GroupBoxEmpresa.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBoxEmpresa.Controls.Add(Me.LabelRuta)
+        Me.GroupBoxEmpresa.Controls.Add(Me.Label5)
         Me.GroupBoxEmpresa.Location = New System.Drawing.Point(544, 243)
         Me.GroupBoxEmpresa.Name = "GroupBoxEmpresa"
         Me.GroupBoxEmpresa.Size = New System.Drawing.Size(208, 106)
@@ -312,18 +340,22 @@ Partial Class Principal
         Me.GroupBoxEmpresa.TabStop = False
         Me.GroupBoxEmpresa.Text = "Empresa"
         '
-        'EmpresaToolStripMenuItem
+        'Label5
         '
-        Me.EmpresaToolStripMenuItem.Name = "EmpresaToolStripMenuItem"
-        Me.EmpresaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.EmpresaToolStripMenuItem.Text = "Empresa"
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(7, 20)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(30, 13)
+        Me.Label5.TabIndex = 0
+        Me.Label5.Text = "Ruta"
         '
-        'TextBoxEstado
+        'LabelRuta
         '
-        Me.TextBoxEstado.Location = New System.Drawing.Point(93, 66)
-        Me.TextBoxEstado.Name = "TextBoxEstado"
-        Me.TextBoxEstado.Size = New System.Drawing.Size(100, 20)
-        Me.TextBoxEstado.TabIndex = 6
+        Me.LabelRuta.AutoSize = True
+        Me.LabelRuta.Location = New System.Drawing.Point(7, 44)
+        Me.LabelRuta.Name = "LabelRuta"
+        Me.LabelRuta.Size = New System.Drawing.Size(0, 13)
+        Me.LabelRuta.TabIndex = 1
         '
         'Principal
         '
@@ -345,6 +377,8 @@ Partial Class Principal
         Me.GroupBoxServidor.PerformLayout()
         Me.GroupBoxServidorSQL.ResumeLayout(False)
         Me.GroupBoxServidorSQL.PerformLayout()
+        Me.GroupBoxEmpresa.ResumeLayout(False)
+        Me.GroupBoxEmpresa.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -384,5 +418,8 @@ Partial Class Principal
     Friend WithEvents GroupBoxEmpresa As System.Windows.Forms.GroupBox
     Friend WithEvents EmpresaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TextBoxEstado As System.Windows.Forms.TextBox
+    Friend WithEvents LabelInstancia As System.Windows.Forms.Label
+    Friend WithEvents LabelRuta As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 
 End Class

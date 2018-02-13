@@ -24,8 +24,8 @@ Partial Class Socket
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBoxPuerto = New System.Windows.Forms.TextBox()
+        Me.TextBoxDireccion = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnGuardar = New System.Windows.Forms.Button()
@@ -35,8 +35,8 @@ Partial Class Socket
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.TextBoxPuerto)
+        Me.GroupBox1.Controls.Add(Me.TextBoxDireccion)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
@@ -46,19 +46,19 @@ Partial Class Socket
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos de Servidor"
         '
-        'TextBox2
+        'TextBoxPuerto
         '
-        Me.TextBox2.Location = New System.Drawing.Point(106, 63)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(149, 20)
-        Me.TextBox2.TabIndex = 3
+        Me.TextBoxPuerto.Location = New System.Drawing.Point(106, 63)
+        Me.TextBoxPuerto.Name = "TextBoxPuerto"
+        Me.TextBoxPuerto.Size = New System.Drawing.Size(149, 20)
+        Me.TextBoxPuerto.TabIndex = 3
         '
-        'TextBox1
+        'TextBoxDireccion
         '
-        Me.TextBox1.Location = New System.Drawing.Point(106, 26)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(149, 20)
-        Me.TextBox1.TabIndex = 2
+        Me.TextBoxDireccion.Location = New System.Drawing.Point(106, 26)
+        Me.TextBoxDireccion.Name = "TextBoxDireccion"
+        Me.TextBoxDireccion.Size = New System.Drawing.Size(149, 20)
+        Me.TextBoxDireccion.TabIndex = 2
         '
         'Label2
         '
@@ -106,8 +106,8 @@ Partial Class Socket
 
     End Sub
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxPuerto As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxDireccion As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents BtnGuardar As System.Windows.Forms.Button

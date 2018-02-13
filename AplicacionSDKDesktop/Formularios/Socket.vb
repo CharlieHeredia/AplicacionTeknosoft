@@ -9,4 +9,15 @@
         ToolTip1.ToolTipTitle = "Nota"
         ToolTip1.ToolTipIcon = ToolTipIcon.Info
     End Sub
+
+    Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
+        If TextBoxDireccion.Text = "" Or TextBoxPuerto.Text = "" Then
+            MsgBox("Falta completar un campo", MsgBoxStyle.Exclamation)
+        Else
+            Dim texto As String = TextBoxDireccion.Text.Trim() + "¬" + TextBoxPuerto.Text.Trim()
+            ActualizarLineaArchivo(texto, 1)
+            MsgBox("Configuración guardada.", MsgBoxStyle.Information)
+            Me.Close()
+        End If
+    End Sub
 End Class

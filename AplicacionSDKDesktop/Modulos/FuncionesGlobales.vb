@@ -60,8 +60,15 @@ Module FuncionesGlobales
             Directory.CreateDirectory(DirectorioSocket) 'CREACIÓN DE DIRECTORIO.'
         End If
     End Function
-    Public Function RevisarServidor() As Boolean
-
+    Public Function SepararLineaTexto(ByVal linea As Integer)
+        Dim NoSeparado As String = LeerLineaArchivo(linea)
+        If NoSeparado = "EMPTY" Then
+            Dim arreglo() As String = {"SinConf"} 'EN CASO DE ESTAR VACIA LA INFORMACIÓN DEVULVE ESTA PALABRA.'
+            Return arreglo
+        Else
+            Dim arreglo() As String = Split(NoSeparado, "¬")
+            Return arreglo
+        End If
     End Function
     Public Function LeerLineaArchivo(ByVal linea As Integer) As String
         'LEE EL ARCHIVO DE CONFIGURACIÓN, REGRESA LA LINEA DE TEXTO QUE SE LE ENVIE COMO PARAMETRO.'

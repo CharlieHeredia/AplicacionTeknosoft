@@ -24,20 +24,21 @@ Partial Class SQL
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBoxPass = New System.Windows.Forms.TextBox()
+        Me.TextBoxUser = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnGuardar = New System.Windows.Forms.Button()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.ComboBox1)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.TextBoxPass)
+        Me.GroupBox1.Controls.Add(Me.TextBoxUser)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
@@ -56,20 +57,20 @@ Partial Class SQL
         Me.ComboBox1.Size = New System.Drawing.Size(183, 21)
         Me.ComboBox1.TabIndex = 5
         '
-        'TextBox2
+        'TextBoxPass
         '
-        Me.TextBox2.Location = New System.Drawing.Point(100, 49)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox2.Size = New System.Drawing.Size(130, 20)
-        Me.TextBox2.TabIndex = 4
+        Me.TextBoxPass.Location = New System.Drawing.Point(100, 49)
+        Me.TextBoxPass.Name = "TextBoxPass"
+        Me.TextBoxPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextBoxPass.Size = New System.Drawing.Size(130, 20)
+        Me.TextBoxPass.TabIndex = 4
         '
-        'TextBox1
+        'TextBoxUser
         '
-        Me.TextBox1.Location = New System.Drawing.Point(100, 19)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(130, 20)
-        Me.TextBox1.TabIndex = 3
+        Me.TextBoxUser.Location = New System.Drawing.Point(100, 19)
+        Me.TextBoxUser.Name = "TextBoxUser"
+        Me.TextBoxUser.Size = New System.Drawing.Size(130, 20)
+        Me.TextBoxUser.TabIndex = 3
         '
         'Label3
         '
@@ -107,6 +108,9 @@ Partial Class SQL
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = True
         '
+        'BackgroundWorker1
+        '
+        '
         'SQL
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -127,10 +131,11 @@ Partial Class SQL
     End Sub
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxPass As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxUser As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents BtnGuardar As System.Windows.Forms.Button
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
 End Class
