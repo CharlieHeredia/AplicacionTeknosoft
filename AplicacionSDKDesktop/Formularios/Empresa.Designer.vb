@@ -23,10 +23,10 @@ Partial Class Empresa
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBoxEmpresa = New System.Windows.Forms.GroupBox()
-        Me.BtnBuscar = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.TextBoxRuta = New System.Windows.Forms.TextBox()
+        Me.BtnGuardar = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.BtnBuscar = New System.Windows.Forms.Button()
         Me.GroupBoxEmpresa.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -43,23 +43,12 @@ Partial Class Empresa
         Me.GroupBoxEmpresa.TabStop = False
         Me.GroupBoxEmpresa.Text = "Ruta de empresa"
         '
-        'BtnBuscar
+        'TextBoxRuta
         '
-        Me.BtnBuscar.Location = New System.Drawing.Point(117, 71)
-        Me.BtnBuscar.Name = "BtnBuscar"
-        Me.BtnBuscar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnBuscar.TabIndex = 0
-        Me.BtnBuscar.Text = "Buscar"
-        Me.BtnBuscar.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 28)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(33, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Ruta:"
+        Me.TextBoxRuta.Location = New System.Drawing.Point(56, 25)
+        Me.TextBoxRuta.Name = "TextBoxRuta"
+        Me.TextBoxRuta.Size = New System.Drawing.Size(230, 20)
+        Me.TextBoxRuta.TabIndex = 2
         '
         'BtnGuardar
         '
@@ -70,12 +59,23 @@ Partial Class Empresa
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = True
         '
-        'TextBoxRuta
+        'Label1
         '
-        Me.TextBoxRuta.Location = New System.Drawing.Point(56, 25)
-        Me.TextBoxRuta.Name = "TextBoxRuta"
-        Me.TextBoxRuta.Size = New System.Drawing.Size(230, 20)
-        Me.TextBoxRuta.TabIndex = 2
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(6, 28)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(33, 13)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Ruta:"
+        '
+        'BtnBuscar
+        '
+        Me.BtnBuscar.Location = New System.Drawing.Point(117, 71)
+        Me.BtnBuscar.Name = "BtnBuscar"
+        Me.BtnBuscar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnBuscar.TabIndex = 0
+        Me.BtnBuscar.Text = "Buscar"
+        Me.BtnBuscar.UseVisualStyleBackColor = True
         '
         'Empresa
         '

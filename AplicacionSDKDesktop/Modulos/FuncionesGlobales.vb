@@ -95,4 +95,20 @@ Module FuncionesGlobales
         File.WriteAllLines(DirectorioArchivoConfiguracion, lineas) 'ACTUALIZAR LA INFORMACIÓN EN EL TXT.'
         EncryptFile(DirectorioArchivoConfiguracion, Key)
     End Function
+    Public Function ActualizarEtiquetas(ByRef Instancia As Label, ByRef Puerto As Label, ByRef IP As Label, ByRef Ruta As Label)
+        Dim arreglo() As String = SepararLineaTexto(2) 'LEE LA LINEA DEL ARCHIVO NO.3 PARA CARGAR LA INFORMACIÓN EN LA APLICACIÓN.'
+        If arreglo(0) <> "SinConf" Then
+            Instancia.Text = arreglo(2)
+        End If
+        arreglo = SepararLineaTexto(1)
+        If arreglo(0) <> "SinConf" Then
+            IP.Text = arreglo(0)
+            Puerto.Text = arreglo(1)
+        End If
+        arreglo = SepararLineaTexto(0)
+        If arreglo(0) <> "SinConf" Then
+            Ruta.Text = arreglo(0)
+        End If
+    End Function
+
 End Module
