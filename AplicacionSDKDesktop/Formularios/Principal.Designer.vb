@@ -59,8 +59,8 @@ Partial Class Principal
         Me.LabelInstancia = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBoxEmpresa = New System.Windows.Forms.GroupBox()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.LabelRuta = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBoxServidor.SuspendLayout()
         Me.GroupBoxServidorSQL.SuspendLayout()
@@ -214,13 +214,13 @@ Partial Class Principal
         'IniciarToolStripMenuItem
         '
         Me.IniciarToolStripMenuItem.Name = "IniciarToolStripMenuItem"
-        Me.IniciarToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
+        Me.IniciarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.IniciarToolStripMenuItem.Text = "Iniciar"
         '
         'DToolStripMenuItem
         '
         Me.DToolStripMenuItem.Name = "DToolStripMenuItem"
-        Me.DToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
+        Me.DToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.DToolStripMenuItem.Text = "Detener"
         '
         'GroupBoxServidor
@@ -340,6 +340,14 @@ Partial Class Principal
         Me.GroupBoxEmpresa.TabStop = False
         Me.GroupBoxEmpresa.Text = "Empresa"
         '
+        'LabelRuta
+        '
+        Me.LabelRuta.AutoSize = True
+        Me.LabelRuta.Location = New System.Drawing.Point(7, 44)
+        Me.LabelRuta.Name = "LabelRuta"
+        Me.LabelRuta.Size = New System.Drawing.Size(0, 13)
+        Me.LabelRuta.TabIndex = 1
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -348,14 +356,6 @@ Partial Class Principal
         Me.Label5.Size = New System.Drawing.Size(30, 13)
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "Ruta"
-        '
-        'LabelRuta
-        '
-        Me.LabelRuta.AutoSize = True
-        Me.LabelRuta.Location = New System.Drawing.Point(7, 44)
-        Me.LabelRuta.Name = "LabelRuta"
-        Me.LabelRuta.Size = New System.Drawing.Size(0, 13)
-        Me.LabelRuta.TabIndex = 1
         '
         'Principal
         '

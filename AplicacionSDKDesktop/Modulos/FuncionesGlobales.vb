@@ -98,14 +98,17 @@ Module FuncionesGlobales
     Public Function ActualizarEtiquetas(ByRef Instancia As Label, ByRef Puerto As Label, ByRef IP As Label, ByRef Ruta As Label)
         Dim arreglo() As String = SepararLineaTexto(2) 'LEE LA LINEA DEL ARCHIVO NO.3 PARA CARGAR LA INFORMACIÓN EN LA APLICACIÓN.'
         If arreglo(0) <> "SinConf" Then
-            Instancia.Text = arreglo(2)
+            Instancia.Text = arreglo(2) 'INFORMACIÓN DE SQL'
         End If
-        arreglo = SepararLineaTexto(1)
+        arreglo = SepararLineaTexto(1) 'INFORMACIÓN DE IP Y PUERTO.'
         If arreglo(0) <> "SinConf" Then
             IP.Text = arreglo(0)
             Puerto.Text = arreglo(1)
+            'TRASPASO DE INFORMACIÓN PARA PODER INICIAR EL SERVIDOR.'
+            DireccionIP = IP.Text
+            PuertoG = Puerto.Text
         End If
-        arreglo = SepararLineaTexto(0)
+        arreglo = SepararLineaTexto(0) 'INFORMACIÓN DE RUTA
         If arreglo(0) <> "SinConf" Then
             Ruta.Text = arreglo(0)
         End If

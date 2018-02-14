@@ -8,7 +8,7 @@ Public Class TCPControl
 
     'Configuración de servidor'
     Public ServerIP As IPAddress = IPAddress.Parse(DireccionIP) 'Dirección IP del servidor'
-    Public ServerPort As Integer = Puerto 'Puerto del servidor'
+    Public ServerPort As Integer = PuertoG 'Puerto del servidor'
     Public Server As TcpListener
 
     Private ComThread As Thread

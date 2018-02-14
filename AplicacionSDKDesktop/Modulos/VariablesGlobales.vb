@@ -1,6 +1,6 @@
 ﻿Module VariablesGlobales
     Public DireccionIP As String = "" 'DIRECCIÓN IP DEL SERVIDOR'
-    Public Puerto As String = "" 'PUERTO UTILIZADO POR EL SOCKET'
+    Public PuertoG As String = "" 'PUERTO UTILIZADO POR EL SOCKET'
     Public ConfiguraciónCompleta As Boolean = False 'PARA VERIFICAR QUE LA DIRECCIÓN IP Y EL PUERTO SE CONFIGURARON CORRECTAMENTE.'
     Public Key As String = "teknocom"
     Public DirectorioSocket As String = "C:\TeknoCom\Socket"
