@@ -11,9 +11,15 @@ Public Class Principal
 
     Private Sub Principal_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         If IsNothing(Server) = False Then
-            Server.IsListening = False
-            Server.Server.Stop()
+            If MsgBox("Se detendra el servidor", MsgBoxStyle.YesNo, MsgBoxStyle.Exclamation) = MsgBoxResult.Yes Then
+                Server.IsListening = False
+                Server.Server.Stop()
+                e.Cancel = False
+            Else
+                e.Cancel = True
+            End If
         End If
+        
     End Sub
 
     Private Sub Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
