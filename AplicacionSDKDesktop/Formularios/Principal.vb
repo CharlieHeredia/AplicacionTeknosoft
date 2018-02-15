@@ -11,13 +11,16 @@ Public Class Principal
 
     Private Sub Principal_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         If IsNothing(Server) = False Then
-            If MsgBox("Se detendra el servidor", MsgBoxStyle.YesNo, MsgBoxStyle.Exclamation) = MsgBoxResult.Yes Then
-                Server.IsListening = False
-                Server.Server.Stop()
-                e.Cancel = False
-            Else
-                e.Cancel = True
+            If TextBoxEstado.BackColor = Color.Green Then
+                If MsgBox("Se detendra el servidor", MsgBoxStyle.YesNo, MsgBoxStyle.Exclamation) = MsgBoxResult.Yes Then
+                    Server.IsListening = False
+                    Server.Server.Stop()
+                    e.Cancel = False
+                Else
+                    e.Cancel = True
+                End If
             End If
+            
         End If
         
     End Sub
@@ -43,9 +46,14 @@ Public Class Principal
     Private Sub DToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DToolStripMenuItem.Click
         'HAY UN SERVIDOR CORRIENDO.'
         If IsNothing(Server) = False Then
-            If MsgBox("Algunas funciones del Web Service dejaran de funcionar. ¿Desea continuar?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-                Server.IsListening = False
-                Server.Server.Stop()
+            If TextBoxEstado.BackColor = Color.Green Then
+                If MsgBox("Algunas funciones del Web Service dejaran de funcionar. ¿Desea continuar?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                    Server.IsListening = False
+                    Server.Server.Stop()
+                    TextBoxEstado.BackColor = Color.Red
+                End If
+            Else
+                MsgBox("El servidor no ha sido iniciado.", MsgBoxStyle.Information)
             End If
         Else
             MsgBox("El servidor no ha sido iniciado.", MsgBoxStyle.Information)
@@ -60,6 +68,7 @@ Public Class Principal
                 Server = New TCPControl 'SE GENERA UNA NUEVA INSTANCIA LA VARIABLE TIPO TCPControl.'
                 TextBoxEstado.BackColor = Color.Green ' INDICADOR DE SERVIDOR INICIALIZADO PARA EL USUARIO.'
                 AddHandler Server.Trimbrar, AddressOf OnLineReceived 'SE CAPTURA EL EVENTO Timbrar'
+                MsgBox("Servidor Iniciado.", MsgBoxStyle.Information)
             End If
         Else
             'HAY UN SERVIDOR CORRIENDO.'
