@@ -26,19 +26,6 @@ Partial Class Principal
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DocumentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AltaDocumentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ActualizarDocumentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MovimientoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AltaMovimientoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ActualizarMovimientoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProductoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AltaProductoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ActualizarProductoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AltaClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ActualizarClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConfiguraciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SQLToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SocketToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -69,7 +56,7 @@ Partial Class Principal
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuToolStripMenuItem, Me.ArchivoToolStripMenuItem, Me.ConfiguraciónToolStripMenuItem, Me.ReporteToolStripMenuItem, Me.ServidorToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuToolStripMenuItem, Me.ConfiguraciónToolStripMenuItem, Me.ReporteToolStripMenuItem, Me.ServidorToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(764, 24)
@@ -87,91 +74,8 @@ Partial Class Principal
         '
         Me.SalirToolStripMenuItem.Image = CType(resources.GetObject("SalirToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(96, 22)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
-        '
-        'ArchivoToolStripMenuItem
-        '
-        Me.ArchivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DocumentoToolStripMenuItem, Me.MovimientoToolStripMenuItem, Me.ProductoToolStripMenuItem, Me.ClienteToolStripMenuItem})
-        Me.ArchivoToolStripMenuItem.Name = "ArchivoToolStripMenuItem"
-        Me.ArchivoToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
-        Me.ArchivoToolStripMenuItem.Text = "Archivo"
-        '
-        'DocumentoToolStripMenuItem
-        '
-        Me.DocumentoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AltaDocumentoToolStripMenuItem, Me.ActualizarDocumentoToolStripMenuItem})
-        Me.DocumentoToolStripMenuItem.Name = "DocumentoToolStripMenuItem"
-        Me.DocumentoToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
-        Me.DocumentoToolStripMenuItem.Text = "Documento"
-        '
-        'AltaDocumentoToolStripMenuItem
-        '
-        Me.AltaDocumentoToolStripMenuItem.Name = "AltaDocumentoToolStripMenuItem"
-        Me.AltaDocumentoToolStripMenuItem.Size = New System.Drawing.Size(192, 22)
-        Me.AltaDocumentoToolStripMenuItem.Text = "Alta Documento"
-        '
-        'ActualizarDocumentoToolStripMenuItem
-        '
-        Me.ActualizarDocumentoToolStripMenuItem.Name = "ActualizarDocumentoToolStripMenuItem"
-        Me.ActualizarDocumentoToolStripMenuItem.Size = New System.Drawing.Size(192, 22)
-        Me.ActualizarDocumentoToolStripMenuItem.Text = "Actualizar Documento"
-        '
-        'MovimientoToolStripMenuItem
-        '
-        Me.MovimientoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AltaMovimientoToolStripMenuItem, Me.ActualizarMovimientoToolStripMenuItem})
-        Me.MovimientoToolStripMenuItem.Name = "MovimientoToolStripMenuItem"
-        Me.MovimientoToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
-        Me.MovimientoToolStripMenuItem.Text = "Movimiento"
-        '
-        'AltaMovimientoToolStripMenuItem
-        '
-        Me.AltaMovimientoToolStripMenuItem.Name = "AltaMovimientoToolStripMenuItem"
-        Me.AltaMovimientoToolStripMenuItem.Size = New System.Drawing.Size(194, 22)
-        Me.AltaMovimientoToolStripMenuItem.Text = "Alta Movimiento"
-        '
-        'ActualizarMovimientoToolStripMenuItem
-        '
-        Me.ActualizarMovimientoToolStripMenuItem.Name = "ActualizarMovimientoToolStripMenuItem"
-        Me.ActualizarMovimientoToolStripMenuItem.Size = New System.Drawing.Size(194, 22)
-        Me.ActualizarMovimientoToolStripMenuItem.Text = "Actualizar Movimiento"
-        '
-        'ProductoToolStripMenuItem
-        '
-        Me.ProductoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AltaProductoToolStripMenuItem, Me.ActualizarProductoToolStripMenuItem})
-        Me.ProductoToolStripMenuItem.Name = "ProductoToolStripMenuItem"
-        Me.ProductoToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
-        Me.ProductoToolStripMenuItem.Text = "Producto"
-        '
-        'AltaProductoToolStripMenuItem
-        '
-        Me.AltaProductoToolStripMenuItem.Name = "AltaProductoToolStripMenuItem"
-        Me.AltaProductoToolStripMenuItem.Size = New System.Drawing.Size(178, 22)
-        Me.AltaProductoToolStripMenuItem.Text = "Alta Producto"
-        '
-        'ActualizarProductoToolStripMenuItem
-        '
-        Me.ActualizarProductoToolStripMenuItem.Name = "ActualizarProductoToolStripMenuItem"
-        Me.ActualizarProductoToolStripMenuItem.Size = New System.Drawing.Size(178, 22)
-        Me.ActualizarProductoToolStripMenuItem.Text = "Actualizar Producto"
-        '
-        'ClienteToolStripMenuItem
-        '
-        Me.ClienteToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AltaClienteToolStripMenuItem, Me.ActualizarClienteToolStripMenuItem})
-        Me.ClienteToolStripMenuItem.Name = "ClienteToolStripMenuItem"
-        Me.ClienteToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
-        Me.ClienteToolStripMenuItem.Text = "Cliente"
-        '
-        'AltaClienteToolStripMenuItem
-        '
-        Me.AltaClienteToolStripMenuItem.Name = "AltaClienteToolStripMenuItem"
-        Me.AltaClienteToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
-        Me.AltaClienteToolStripMenuItem.Text = "Alta Cliente"
-        '
-        'ActualizarClienteToolStripMenuItem
-        '
-        Me.ActualizarClienteToolStripMenuItem.Name = "ActualizarClienteToolStripMenuItem"
-        Me.ActualizarClienteToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
-        Me.ActualizarClienteToolStripMenuItem.Text = "Actualizar Cliente"
         '
         'ConfiguraciónToolStripMenuItem
         '
@@ -183,19 +87,19 @@ Partial Class Principal
         'SQLToolStripMenuItem
         '
         Me.SQLToolStripMenuItem.Name = "SQLToolStripMenuItem"
-        Me.SQLToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+        Me.SQLToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SQLToolStripMenuItem.Text = "SQL"
         '
         'SocketToolStripMenuItem
         '
         Me.SocketToolStripMenuItem.Name = "SocketToolStripMenuItem"
-        Me.SocketToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+        Me.SocketToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SocketToolStripMenuItem.Text = "Servidor"
         '
         'EmpresaToolStripMenuItem
         '
         Me.EmpresaToolStripMenuItem.Name = "EmpresaToolStripMenuItem"
-        Me.EmpresaToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+        Me.EmpresaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.EmpresaToolStripMenuItem.Text = "Empresa"
         '
         'ReporteToolStripMenuItem
@@ -386,23 +290,10 @@ Partial Class Principal
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents MenuToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SalirToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ArchivoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents DocumentoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents MovimientoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ProductoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ClienteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConfiguraciónToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SQLToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SocketToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ReporteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents AltaDocumentoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ActualizarDocumentoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents AltaMovimientoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ActualizarMovimientoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents AltaProductoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ActualizarProductoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents AltaClienteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ActualizarClienteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GroupBoxServidor As System.Windows.Forms.GroupBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
