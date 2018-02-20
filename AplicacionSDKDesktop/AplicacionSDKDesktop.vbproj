@@ -91,6 +91,12 @@
     <Compile Include="Formularios\Socket.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\Splash.Designer.vb">
+      <DependentUpon>Splash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Splash.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\SQL.Designer.vb">
       <DependentUpon>SQL.vb</DependentUpon>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Socket.resx">
       <DependentUpon>Socket.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Splash.resx">
+      <DependentUpon>Splash.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\SQL.resx">
       <DependentUpon>SQL.vb</DependentUpon>
