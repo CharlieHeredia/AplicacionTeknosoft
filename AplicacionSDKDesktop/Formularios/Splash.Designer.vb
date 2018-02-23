@@ -42,18 +42,18 @@ Partial Class Splash
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AbrirToolStripMenuItem, Me.SalirToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(101, 48)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(153, 70)
         '
         'AbrirToolStripMenuItem
         '
         Me.AbrirToolStripMenuItem.Name = "AbrirToolStripMenuItem"
-        Me.AbrirToolStripMenuItem.Size = New System.Drawing.Size(100, 22)
+        Me.AbrirToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AbrirToolStripMenuItem.Text = "Abrir"
         '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(100, 22)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'Splash

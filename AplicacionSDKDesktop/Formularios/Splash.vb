@@ -1,5 +1,5 @@
 ﻿Public Class Splash
-
+    Dim VentanaPrincipal As Principal
     Private Sub Splash_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Show()
         NotifyIconTeknoComAPI.Visible = True
@@ -10,5 +10,10 @@
         Next
         Me.ShowInTaskbar = False
         Me.NotifyIconTeknoComAPI.ShowBalloonTip(100, "TeknoCom API", "Bienvenidos", ToolTipIcon.Info)
+    End Sub
+
+    Private Sub AbrirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AbrirToolStripMenuItem.Click
+        VentanaPrincipal = New Principal()
+        VentanaPrincipal.Show()
     End Sub
 End Class
