@@ -21,7 +21,6 @@ Public Class TCPControl
     Public Sub New()
         Server = New TcpListener(ServerIP, ServerPort)
         Server.Start()
-
         ComThread = New Thread(New ThreadStart(AddressOf Listening))
         ComThread.Start() 'Inicializa el hilo'
     End Sub
