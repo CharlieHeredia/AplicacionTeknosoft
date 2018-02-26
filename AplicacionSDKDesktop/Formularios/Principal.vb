@@ -26,59 +26,81 @@ Public Class Principal
     End Sub
 
     Private Sub Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ExistenciaDirectorioSocket()
-        ExistenciaArchivoConfiguracion()
-        TextBoxEstado.Enabled = False
-        TextBoxEstado.BackColor = Color.Red
-        ActualizarEtiquetas(LabelInstancia, LabelPuerto, LabelIP, LabelRuta)
-
+        Try
+            ExistenciaDirectorioSocket()
+            ExistenciaArchivoConfiguracion()
+            TextBoxEstado.Enabled = False
+            TextBoxEstado.BackColor = Color.Red
+            ActualizarEtiquetas(LabelInstancia, LabelPuerto, LabelIP, LabelRuta)
+        Catch ex As Exception
+            MsgBox("Error: " & ex.Message, MsgBoxStyle.Exclamation)
+        End Try
     End Sub
 
 
     Private Sub SQLToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SQLToolStripMenuItem.Click
-        Dim VentanaSQL As New SQL
-        VentanaSQL.ShowDialog()
+        Try
+            Dim VentanaSQL As New SQL
+            VentanaSQL.ShowDialog()
+        Catch ex As Exception
+            MsgBox("Error: " & ex.Message, MsgBoxStyle.Exclamation)
+        End Try
+        
     End Sub
 
     Private Sub EmpresaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmpresaToolStripMenuItem.Click
-        VentanaEmpresa.ShowDialog()
+        Try
+            VentanaEmpresa.ShowDialog()
+        Catch ex As Exception
+            MsgBox("Error: " & ex.Message, MsgBoxStyle.Exclamation)
+        End Try
     End Sub
     Private Sub DToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DToolStripMenuItem.Click
         'HAY UN SERVIDOR CORRIENDO.'
-        If IsNothing(Server) = False Then
-            If TextBoxEstado.BackColor = Color.Green Then
-                If MsgBox("Algunas funciones del Web Service dejaran de funcionar. ¿Desea continuar?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-                    Server.IsListening = False
-                    Server.Server.Stop()
-                    TextBoxEstado.BackColor = Color.Red
+        Try
+            If IsNothing(Server) = False Then
+                If TextBoxEstado.BackColor = Color.Green Then
+                    If MsgBox("Algunas funciones del Web Service dejaran de funcionar. ¿Desea continuar?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                        Server.IsListening = False
+                        Server.Server.Stop()
+                        TextBoxEstado.BackColor = Color.Red
+                    End If
+                Else
+                    MsgBox("El servidor no ha sido iniciado.", MsgBoxStyle.Information)
                 End If
             Else
                 MsgBox("El servidor no ha sido iniciado.", MsgBoxStyle.Information)
             End If
-        Else
-            MsgBox("El servidor no ha sido iniciado.", MsgBoxStyle.Information)
-        End If
+        Catch ex As Exception
+            MsgBox("Error: " & ex.Message, MsgBoxStyle.Exclamation)
+        End Try
+        
     End Sub
     Private Sub IniciarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IniciarToolStripMenuItem.Click
         'INICIAR SERVIDOR.'
-        If IsNothing(Server) Then 'VALIDACIÓN DE SERVIDOR INACTIVO.'
-            If DireccionIP = "" Or PuertoG = "" Then 'VERFICACIÓN DE QUE EXISTA CONFIGURACIÓN DE IP Y PUERTO PARA EL SERVIDOR.'
-                MsgBox("No se ha configurado el servidor.", MsgBoxStyle.Exclamation)
+        Try
+            If IsNothing(Server) Then 'VALIDACIÓN DE SERVIDOR INACTIVO.'
+                If DireccionIP = "" Or PuertoG = "" Then 'VERFICACIÓN DE QUE EXISTA CONFIGURACIÓN DE IP Y PUERTO PARA EL SERVIDOR.'
+                    MsgBox("No se ha configurado el servidor.", MsgBoxStyle.Exclamation)
+                Else
+                    Server = New TCPControl 'SE GENERA UNA NUEVA INSTANCIA LA VARIABLE TIPO TCPControl.'
+                    TextBoxEstado.BackColor = Color.Green ' INDICADOR DE SERVIDOR INICIALIZADO PARA EL USUARIO.'
+                    AddHandler Server.Trimbrar, AddressOf OnLineReceived 'SE CAPTURA EL EVENTO Timbrar'
+                    MsgBox("Servidor Iniciado.", MsgBoxStyle.Information)
+                End If
             Else
-                Server = New TCPControl 'SE GENERA UNA NUEVA INSTANCIA LA VARIABLE TIPO TCPControl.'
-                TextBoxEstado.BackColor = Color.Green ' INDICADOR DE SERVIDOR INICIALIZADO PARA EL USUARIO.'
-                AddHandler Server.Trimbrar, AddressOf OnLineReceived 'SE CAPTURA EL EVENTO Timbrar'
-                MsgBox("Servidor Iniciado.", MsgBoxStyle.Information)
+                'HAY UN SERVIDOR CORRIENDO.'
+                If MsgBox("Hay un servidor corriendo, se detendra el servidor. ¿Desea continuar?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                    Server.IsListening = False
+                    Server.Server.Stop()
+                    Server = New TCPControl 'SE GENERA UNA NUEVA INSTANCIA LA VARIABLE TIPO TCPControl.'
+                    AddHandler Server.Trimbrar, AddressOf OnLineReceived 'SE CAPTURA EL EVENTO Timbrar'
+                End If
             End If
-        Else
-            'HAY UN SERVIDOR CORRIENDO.'
-            If MsgBox("Hay un servidor corriendo, se detendra el servidor. ¿Desea continuar?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-                Server.IsListening = False
-                Server.Server.Stop()
-                Server = New TCPControl 'SE GENERA UNA NUEVA INSTANCIA LA VARIABLE TIPO TCPControl.'
-                AddHandler Server.Trimbrar, AddressOf OnLineReceived 'SE CAPTURA EL EVENTO Timbrar'
-            End If
-        End If
+        Catch ex As Exception
+            MsgBox("Error: " & ex.Message, MsgBoxStyle.Exclamation)
+        End Try
+        
     End Sub
     Private Sub OnLineReceived(sender As TCPControl, Data As String) 'SUB FUNCIÓN PARA TIMBRAR'
         If Data <> "" Then
@@ -127,4 +149,19 @@ Public Class Principal
     End Function
 
  
+    Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
+        If IsNothing(Server) = False Then
+            If TextBoxEstado.BackColor = Color.Green Then
+                If MsgBox("Se detendra el servidor", MsgBoxStyle.YesNo, MsgBoxStyle.Exclamation) = MsgBoxResult.Yes Then
+                    Server.IsListening = False
+                    Server.Server.Stop()
+                    Application.ExitThread()
+                End If
+            Else
+                Application.ExitThread()
+            End If
+        Else
+            Application.ExitThread()
+        End If
+    End Sub
 End Class
