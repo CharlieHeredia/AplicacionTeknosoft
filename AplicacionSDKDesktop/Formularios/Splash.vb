@@ -23,7 +23,13 @@
 
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
         If ServidorFuncionando = True Then
-
+            If MsgBox("Hay un servidor corriendo, se detendra el servidor. ¿Desea continuar?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                'Server.IsListening = False
+                'Server.Server.Stop()
+                ServidorFuncionando = False
+                VentanaPrincipal._Estado = False
+                Application.ExitThread()
+            End If
         Else
             Application.ExitThread() 'CERRAR APLICACIÓN.'
         End If

@@ -5,6 +5,16 @@ Public Class Principal
     Dim VentanaSocket As New Socket
     Dim VentanaEmpresa As New Empresa
     Private Server As TCPControl
+
+    Public Property _Estado() As Boolean
+        Get
+            Return Server.IsListening
+        End Get
+        Set(value As Boolean)
+            Server.IsListening = value
+            Server.Server.Stop()
+        End Set
+    End Property
     Private Sub SocketToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SocketToolStripMenuItem.Click
         VentanaSocket.ShowDialog()
     End Sub
