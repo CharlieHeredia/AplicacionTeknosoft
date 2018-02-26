@@ -86,18 +86,21 @@ Partial Class Principal
         '
         'SQLToolStripMenuItem
         '
+        Me.SQLToolStripMenuItem.Image = CType(resources.GetObject("SQLToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SQLToolStripMenuItem.Name = "SQLToolStripMenuItem"
         Me.SQLToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SQLToolStripMenuItem.Text = "SQL"
         '
         'SocketToolStripMenuItem
         '
+        Me.SocketToolStripMenuItem.Image = CType(resources.GetObject("SocketToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SocketToolStripMenuItem.Name = "SocketToolStripMenuItem"
         Me.SocketToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SocketToolStripMenuItem.Text = "Servidor"
         '
         'EmpresaToolStripMenuItem
         '
+        Me.EmpresaToolStripMenuItem.Image = CType(resources.GetObject("EmpresaToolStripMenuItem.Image"), System.Drawing.Image)
         Me.EmpresaToolStripMenuItem.Name = "EmpresaToolStripMenuItem"
         Me.EmpresaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.EmpresaToolStripMenuItem.Text = "Empresa"
@@ -117,12 +120,14 @@ Partial Class Principal
         '
         'IniciarToolStripMenuItem
         '
+        Me.IniciarToolStripMenuItem.Image = CType(resources.GetObject("IniciarToolStripMenuItem.Image"), System.Drawing.Image)
         Me.IniciarToolStripMenuItem.Name = "IniciarToolStripMenuItem"
         Me.IniciarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.IniciarToolStripMenuItem.Text = "Iniciar"
         '
         'DToolStripMenuItem
         '
+        Me.DToolStripMenuItem.Image = CType(resources.GetObject("DToolStripMenuItem.Image"), System.Drawing.Image)
         Me.DToolStripMenuItem.Name = "DToolStripMenuItem"
         Me.DToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.DToolStripMenuItem.Text = "Detener"
@@ -274,7 +279,7 @@ Partial Class Principal
         Me.MinimumSize = New System.Drawing.Size(780, 400)
         Me.Name = "Principal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "TeknoSoft"
+        Me.Text = "TeknoCom API"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.GroupBoxServidor.ResumeLayout(False)

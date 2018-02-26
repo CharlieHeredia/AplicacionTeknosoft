@@ -6,4 +6,5 @@
     Public DirectorioSocket As String = "C:\TeknoCom\Socket"
     Public aRutaFormato As String = "" 'UBICACIÓN DEL ARCHIVO DE FORMATO.'
     Public DirectorioArchivoConfiguracion As String = "C:\TeknoCom\Socket\ConfiguracionSocket.txt"
+    Public ServidorFuncionando As Boolean = False
 End Module

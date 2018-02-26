@@ -10,19 +10,21 @@ Public Class Principal
     End Sub
 
     Private Sub Principal_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        If IsNothing(Server) = False Then
-            If TextBoxEstado.BackColor = Color.Green Then
-                If MsgBox("Se detendra el servidor", MsgBoxStyle.YesNo, MsgBoxStyle.Exclamation) = MsgBoxResult.Yes Then
-                    Server.IsListening = False
-                    Server.Server.Stop()
-                    e.Cancel = False
-                Else
-                    e.Cancel = True
-                End If
-            End If
-            
-        End If
-        
+        e.Cancel = True ' CANCELAR CIERRE DE FORMULARIO.'
+        Me.Hide() ' OCULTER FOMULARIO.'
+        'If IsNothing(Server) = False Then
+        'If TextBoxEstado.BackColor = Color.Green Then
+        'If MsgBox("Se detendra el servidor", MsgBoxStyle.YesNo, MsgBoxStyle.Exclamation) = MsgBoxResult.Yes Then
+        'Server.IsListening = False
+        'Server.Server.Stop()
+        'e.Cancel = False
+        'Else
+        'e.Cancel = True
+        'End If
+        'End If
+
+        'End If
+
     End Sub
 
     Private Sub Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -86,6 +88,7 @@ Public Class Principal
                     Server = New TCPControl 'SE GENERA UNA NUEVA INSTANCIA LA VARIABLE TIPO TCPControl.'
                     TextBoxEstado.BackColor = Color.Green ' INDICADOR DE SERVIDOR INICIALIZADO PARA EL USUARIO.'
                     AddHandler Server.Trimbrar, AddressOf OnLineReceived 'SE CAPTURA EL EVENTO Timbrar'
+                    ServidorFuncionando = True
                     MsgBox("Servidor Iniciado.", MsgBoxStyle.Information)
                 End If
             Else
@@ -93,8 +96,10 @@ Public Class Principal
                 If MsgBox("Hay un servidor corriendo, se detendra el servidor. ¿Desea continuar?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                     Server.IsListening = False
                     Server.Server.Stop()
+                    ServidorFuncionando = False
                     Server = New TCPControl 'SE GENERA UNA NUEVA INSTANCIA LA VARIABLE TIPO TCPControl.'
                     AddHandler Server.Trimbrar, AddressOf OnLineReceived 'SE CAPTURA EL EVENTO Timbrar'
+                    ServidorFuncionando = True
                 End If
             End If
         Catch ex As Exception

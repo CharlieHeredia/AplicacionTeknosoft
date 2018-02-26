@@ -1,5 +1,5 @@
 ﻿Public Class Splash
-    Dim VentanaPrincipal As Principal
+    Dim VentanaPrincipal As New Principal
     Private Sub Splash_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Show()
         NotifyIconTeknoComAPI.Visible = True
@@ -13,7 +13,19 @@
     End Sub
 
     Private Sub AbrirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AbrirToolStripMenuItem.Click
-        VentanaPrincipal = New Principal()
-        VentanaPrincipal.Show()
+        Try
+            VentanaPrincipal.Show()
+        Catch ex As Exception
+            MsgBox("Error: " & ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
+        If ServidorFuncionando = True Then
+
+        Else
+            Application.ExitThread() 'CERRAR APLICACIÓN.'
+        End If
     End Sub
 End Class

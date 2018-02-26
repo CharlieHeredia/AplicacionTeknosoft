@@ -23,6 +23,7 @@ Partial Class Socket
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Socket))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TextBoxPuerto = New System.Windows.Forms.TextBox()
         Me.TextBoxDireccion = New System.Windows.Forms.TextBox()
@@ -94,6 +95,7 @@ Partial Class Socket
         Me.ClientSize = New System.Drawing.Size(299, 161)
         Me.Controls.Add(Me.BtnGuardar)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(315, 200)
         Me.MinimumSize = New System.Drawing.Size(315, 200)
