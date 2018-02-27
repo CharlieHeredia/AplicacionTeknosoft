@@ -31,6 +31,7 @@ Partial Class Socket
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.BtnBorrar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -88,11 +89,21 @@ Partial Class Socket
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = True
         '
+        'BtnBorrar
+        '
+        Me.BtnBorrar.Location = New System.Drawing.Point(12, 126)
+        Me.BtnBorrar.Name = "BtnBorrar"
+        Me.BtnBorrar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnBorrar.TabIndex = 2
+        Me.BtnBorrar.Text = "Borrar"
+        Me.BtnBorrar.UseVisualStyleBackColor = True
+        '
         'Socket
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(299, 161)
+        Me.Controls.Add(Me.BtnBorrar)
         Me.Controls.Add(Me.BtnGuardar)
         Me.Controls.Add(Me.GroupBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -114,4 +125,5 @@ Partial Class Socket
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents BtnGuardar As System.Windows.Forms.Button
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
+    Friend WithEvents BtnBorrar As System.Windows.Forms.Button
 End Class

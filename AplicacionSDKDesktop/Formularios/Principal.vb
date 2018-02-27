@@ -5,7 +5,6 @@ Public Class Principal
     Dim VentanaSocket As New Socket
     Dim VentanaEmpresa As New Empresa
     Private Server As TCPControl
-
     Public Property _Estado() As Boolean
         Get
             Return Server.IsListening
@@ -44,6 +43,8 @@ Public Class Principal
             TextBoxEstado.Enabled = False
             TextBoxEstado.BackColor = Color.Red
             ActualizarEtiquetas(LabelInstancia, LabelPuerto, LabelIP, LabelRuta)
+            VentanaSocket._DireccionIP = LabelIP.Text
+            VentanaSocket._Puerto = LabelPuerto.Text
         Catch ex As Exception
             MsgBox("Error: " & ex.Message, MsgBoxStyle.Exclamation)
         End Try

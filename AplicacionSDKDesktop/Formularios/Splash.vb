@@ -27,8 +27,8 @@
                 'Server.IsListening = False
                 'Server.Server.Stop()
                 ServidorFuncionando = False
-                VentanaPrincipal._Estado = False
-                Application.ExitThread()
+                VentanaPrincipal._Estado = False 'PROPIEDAD PARA DETENER EL SERVIDOR.'
+                Application.ExitThread() 'CIERRE DE APLICACIÓN.'
             End If
         Else
             Application.ExitThread() 'CERRAR APLICACIÓN.'
