@@ -56,6 +56,7 @@ Partial Class Principal
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.BackColor = System.Drawing.Color.Silver
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuToolStripMenuItem, Me.ConfiguraciónToolStripMenuItem, Me.ReporteToolStripMenuItem, Me.ServidorToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
@@ -72,6 +73,7 @@ Partial Class Principal
         '
         'SalirToolStripMenuItem
         '
+        Me.SalirToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro
         Me.SalirToolStripMenuItem.Image = CType(resources.GetObject("SalirToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
         Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
@@ -86,6 +88,7 @@ Partial Class Principal
         '
         'SQLToolStripMenuItem
         '
+        Me.SQLToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro
         Me.SQLToolStripMenuItem.Image = CType(resources.GetObject("SQLToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SQLToolStripMenuItem.Name = "SQLToolStripMenuItem"
         Me.SQLToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
@@ -93,6 +96,7 @@ Partial Class Principal
         '
         'SocketToolStripMenuItem
         '
+        Me.SocketToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro
         Me.SocketToolStripMenuItem.Image = CType(resources.GetObject("SocketToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SocketToolStripMenuItem.Name = "SocketToolStripMenuItem"
         Me.SocketToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
@@ -100,6 +104,7 @@ Partial Class Principal
         '
         'EmpresaToolStripMenuItem
         '
+        Me.EmpresaToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro
         Me.EmpresaToolStripMenuItem.Image = CType(resources.GetObject("EmpresaToolStripMenuItem.Image"), System.Drawing.Image)
         Me.EmpresaToolStripMenuItem.Name = "EmpresaToolStripMenuItem"
         Me.EmpresaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
@@ -120,6 +125,7 @@ Partial Class Principal
         '
         'IniciarToolStripMenuItem
         '
+        Me.IniciarToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro
         Me.IniciarToolStripMenuItem.Image = CType(resources.GetObject("IniciarToolStripMenuItem.Image"), System.Drawing.Image)
         Me.IniciarToolStripMenuItem.Name = "IniciarToolStripMenuItem"
         Me.IniciarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
@@ -127,6 +133,7 @@ Partial Class Principal
         '
         'DToolStripMenuItem
         '
+        Me.DToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro
         Me.DToolStripMenuItem.Image = CType(resources.GetObject("DToolStripMenuItem.Image"), System.Drawing.Image)
         Me.DToolStripMenuItem.Name = "DToolStripMenuItem"
         Me.DToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
@@ -270,7 +277,8 @@ Partial Class Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(764, 361)
+        Me.BackColor = System.Drawing.Color.Gainsboro
+        Me.ClientSize = New System.Drawing.Size(764, 362)
         Me.Controls.Add(Me.GroupBoxEmpresa)
         Me.Controls.Add(Me.GroupBoxServidorSQL)
         Me.Controls.Add(Me.GroupBoxServidor)

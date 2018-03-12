@@ -52,4 +52,10 @@
 
 
     End Sub
+
+    Private Sub BtnBorrar_MouseHover(sender As Object, e As EventArgs) Handles BtnBorrar.MouseHover
+        ToolTip1.SetToolTip(BtnBorrar, "Se borrará la configuación del archivo.")
+        ToolTip1.ToolTipTitle = "Nota"
+        ToolTip1.ToolTipIcon = ToolTipIcon.Info
+    End Sub
 End Class

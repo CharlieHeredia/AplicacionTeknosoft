@@ -32,6 +32,7 @@ Partial Class Socket
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.BtnBorrar = New System.Windows.Forms.Button()
+        Me.ToolTip2 = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -102,7 +103,8 @@ Partial Class Socket
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(299, 161)
+        Me.BackColor = System.Drawing.Color.Gainsboro
+        Me.ClientSize = New System.Drawing.Size(299, 162)
         Me.Controls.Add(Me.BtnBorrar)
         Me.Controls.Add(Me.BtnGuardar)
         Me.Controls.Add(Me.GroupBox1)
@@ -126,4 +128,5 @@ Partial Class Socket
     Friend WithEvents BtnGuardar As System.Windows.Forms.Button
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents BtnBorrar As System.Windows.Forms.Button
+    Friend WithEvents ToolTip2 As System.Windows.Forms.ToolTip
 End Class
