@@ -150,6 +150,7 @@ Partial Class Principal
         'GroupBoxServidor
         '
         Me.GroupBoxServidor.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBoxServidor.BackColor = System.Drawing.Color.LightGray
         Me.GroupBoxServidor.Controls.Add(Me.TextBoxEstado)
         Me.GroupBoxServidor.Controls.Add(Me.LabelEstado)
         Me.GroupBoxServidor.Controls.Add(Me.LabelPuerto)
@@ -225,8 +226,10 @@ Partial Class Principal
         'GroupBoxServidorSQL
         '
         Me.GroupBoxServidorSQL.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBoxServidorSQL.BackColor = System.Drawing.Color.LightGray
         Me.GroupBoxServidorSQL.Controls.Add(Me.LabelInstancia)
         Me.GroupBoxServidorSQL.Controls.Add(Me.Label4)
+        Me.GroupBoxServidorSQL.ForeColor = System.Drawing.SystemColors.ControlText
         Me.GroupBoxServidorSQL.Location = New System.Drawing.Point(544, 144)
         Me.GroupBoxServidorSQL.Name = "GroupBoxServidorSQL"
         Me.GroupBoxServidorSQL.Size = New System.Drawing.Size(208, 93)
@@ -255,6 +258,7 @@ Partial Class Principal
         '
         Me.GroupBoxEmpresa.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBoxEmpresa.BackColor = System.Drawing.Color.LightGray
         Me.GroupBoxEmpresa.Controls.Add(Me.LabelRuta)
         Me.GroupBoxEmpresa.Controls.Add(Me.Label5)
         Me.GroupBoxEmpresa.Location = New System.Drawing.Point(544, 243)
