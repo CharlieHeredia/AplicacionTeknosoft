@@ -4,6 +4,7 @@ Imports System.Threading
 Public Class Principal
     Dim VentanaSocket As New Socket
     Dim VentanaEmpresa As New Empresa
+    Dim VentanaRespaldo As New Respaldo
     Private Server As TCPControl
     Public Property _Estado() As Boolean
         Get
@@ -127,12 +128,16 @@ Public Class Principal
     End Sub
     Private Function Timbrado()
         Try
+            MsgBox("Entro")
             '24/01/2018 NOTA: ESTA FUNCIÓN PROCESARA UN ARCHIVO XML GENERADO POR EL WEB SERVICE.'
             GC.Collect() ' COMIENZA A RECOLECTAR LA BASURA GENERADA, PARA LIMPIARLA DESPUES DE TERMINAR EL PROCESO.'
             Directory.SetCurrentDirectory("C:\Program Files (x86)\Compacw\AdminPAQ\") ' SE ESTABLECE LA LOCALIZACIÓN DEL SDK.'
             fInicializaSDK() 'SE INICIALIZA EL SDK.'
+            MsgBox("Llego")
             fAbreEmpresa("\\Server\Empresas\Wurth Mexico")
+            'fAbreEmpresa("C:\Compac\Empresas\adTECNOLOGIA_EN_FLORES")
             Dim aRutaXML As String = "\\server\serverdev\Compartido\Equipo\Jorge\CORRECTO 3.3.xml"
+            'Dim aRutaXML As String = "C:\TeknoCom\171.XML"
             Dim aCodConcepto As String = "110"
             Dim aUUID As String = ""
             Dim aRutaDDA As String = ""
@@ -141,10 +146,13 @@ Public Class Principal
             Dim estado As Integer = fInicializaLicenseInfo(0) ' VALIDACIÓN DE LA LICENCIA DE ADMINPAQ.'
             Dim aMensaje As New Compatibility.VB6.FixedLengthString(350) ' MENSAJE UTILIZADO PARA OBTENER EL ERROR DEL SISTEMA.'
             aMensaje.Value = New String(Chr(0), 349)
+            MsgBox("Chaca: " & aMensaje.Value.ToString.Trim())
             If estado <> 0 Then
+
                 fError(estado, aMensaje.Value, 350) ' OBTIENE EL ERROR.'
                 MsgBox("Error Licencia: " & aMensaje.Value) ' MENSAJE DE ERROR.'
             Else
+                MsgBox("Entro 2")
                 estado = fTimbraXML(aRutaXML, aCodConcepto, aUUID, aRutaDDA, Application.StartupPath & "\Archivos\", aPass, aRutaFormato)
                 If estado <> 0 Then
                     fError(estado, aMensaje.Value, 350)
@@ -179,5 +187,13 @@ Public Class Principal
         Else
             Application.ExitThread()
         End If
+    End Sub
+
+    Private Sub RespaldoToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles RespaldoToolStripMenuItem1.Click
+        Try
+            VentanaRespaldo.ShowDialog()
+        Catch ex As Exception
+            MsgBox("Error: " & ex.Message, MsgBoxStyle.Exclamation)
+        End Try
     End Sub
 End Class

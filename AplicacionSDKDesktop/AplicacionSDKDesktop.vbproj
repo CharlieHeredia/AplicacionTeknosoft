@@ -85,6 +85,12 @@
       <DependentUpon>Principal.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\Respaldo.Designer.vb">
+      <DependentUpon>Respaldo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Respaldo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\Socket.Designer.vb">
       <DependentUpon>Socket.vb</DependentUpon>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Principal.resx">
       <DependentUpon>Principal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Respaldo.resx">
+      <DependentUpon>Respaldo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Socket.resx">
       <DependentUpon>Socket.vb</DependentUpon>

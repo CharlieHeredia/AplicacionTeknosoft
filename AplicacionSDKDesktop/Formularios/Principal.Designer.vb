@@ -34,6 +34,7 @@ Partial Class Principal
         Me.ServidorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IniciarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RespaldoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBoxServidor = New System.Windows.Forms.GroupBox()
         Me.TextBoxEstado = New System.Windows.Forms.TextBox()
         Me.LabelEstado = New System.Windows.Forms.Label()
@@ -48,6 +49,7 @@ Partial Class Principal
         Me.GroupBoxEmpresa = New System.Windows.Forms.GroupBox()
         Me.LabelRuta = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.RespaldoToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBoxServidor.SuspendLayout()
         Me.GroupBoxServidorSQL.SuspendLayout()
@@ -57,7 +59,7 @@ Partial Class Principal
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.Silver
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuToolStripMenuItem, Me.ConfiguraciónToolStripMenuItem, Me.ReporteToolStripMenuItem, Me.ServidorToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuToolStripMenuItem, Me.ConfiguraciónToolStripMenuItem, Me.ReporteToolStripMenuItem, Me.ServidorToolStripMenuItem, Me.RespaldoToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(764, 24)
@@ -76,12 +78,12 @@ Partial Class Principal
         Me.SalirToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro
         Me.SalirToolStripMenuItem.Image = CType(resources.GetObject("SalirToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(96, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'ConfiguraciónToolStripMenuItem
         '
-        Me.ConfiguraciónToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SQLToolStripMenuItem, Me.SocketToolStripMenuItem, Me.EmpresaToolStripMenuItem})
+        Me.ConfiguraciónToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SQLToolStripMenuItem, Me.SocketToolStripMenuItem, Me.EmpresaToolStripMenuItem, Me.RespaldoToolStripMenuItem1})
         Me.ConfiguraciónToolStripMenuItem.Name = "ConfiguraciónToolStripMenuItem"
         Me.ConfiguraciónToolStripMenuItem.Size = New System.Drawing.Size(95, 20)
         Me.ConfiguraciónToolStripMenuItem.Text = "Configuración"
@@ -128,7 +130,7 @@ Partial Class Principal
         Me.IniciarToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro
         Me.IniciarToolStripMenuItem.Image = CType(resources.GetObject("IniciarToolStripMenuItem.Image"), System.Drawing.Image)
         Me.IniciarToolStripMenuItem.Name = "IniciarToolStripMenuItem"
-        Me.IniciarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.IniciarToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
         Me.IniciarToolStripMenuItem.Text = "Iniciar"
         '
         'DToolStripMenuItem
@@ -136,8 +138,14 @@ Partial Class Principal
         Me.DToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro
         Me.DToolStripMenuItem.Image = CType(resources.GetObject("DToolStripMenuItem.Image"), System.Drawing.Image)
         Me.DToolStripMenuItem.Name = "DToolStripMenuItem"
-        Me.DToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
         Me.DToolStripMenuItem.Text = "Detener"
+        '
+        'RespaldoToolStripMenuItem
+        '
+        Me.RespaldoToolStripMenuItem.Name = "RespaldoToolStripMenuItem"
+        Me.RespaldoToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
+        Me.RespaldoToolStripMenuItem.Text = "Respaldo"
         '
         'GroupBoxServidor
         '
@@ -273,6 +281,14 @@ Partial Class Principal
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "Ruta"
         '
+        'RespaldoToolStripMenuItem1
+        '
+        Me.RespaldoToolStripMenuItem1.BackColor = System.Drawing.Color.Gainsboro
+        Me.RespaldoToolStripMenuItem1.Image = CType(resources.GetObject("RespaldoToolStripMenuItem1.Image"), System.Drawing.Image)
+        Me.RespaldoToolStripMenuItem1.Name = "RespaldoToolStripMenuItem1"
+        Me.RespaldoToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.RespaldoToolStripMenuItem1.Text = "Respaldo"
+        '
         'Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -325,5 +341,7 @@ Partial Class Principal
     Friend WithEvents LabelInstancia As System.Windows.Forms.Label
     Friend WithEvents LabelRuta As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents RespaldoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents RespaldoToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 
 End Class
